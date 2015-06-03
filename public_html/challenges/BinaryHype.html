@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>Binary Hype</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>
+            <h3>The Challenge: <a href="http://www.reddit.com/r/dailyprogrammer/comments/2xx86n/20150302_challenge_204_intermediate_its_like/">Hyper Binary Systems</a></h3>
+            <p>We all know and love the binary number system, but today we&#39;re going to do something a little bit different with it. We&#39;re going to break it by adding another number.</p>
+
+            <p>The regular binary number system uses two digits, 0 and 1, and the positions they are put in represents different powers of 2, increasing from right to left. So, for example, if you have the binary number 110101, that is equal to</p>
+
+            <p>1*2<sup>5</sup> + 1*2<sup>4</sup> + 0*2<sup>3</sup> + 1*2<sup>2</sup> + 0*2<sup>1</sup> + 1*2<sup>0</sup> </p>
+
+            <p>= 2<sup>5</sup> + 2<sup>4</sup> + 2<sup>2</sup> + 2<sup>0</sup></p>
+
+            <p>= 32 + 16 + 4 + 1</p>
+
+            <p>= 53 </p>
+
+            <p>Easy enough, but now lets have some fun with it. </p>
+
+            <p>Imagine that instead of having just the two digits 0 and 1, the binary number system had three digits, 0, 1 and 2 with everything else working exactly the same. This system is known as the &quot;hyperbinary number system&quot;.</p>
+
+            <p>Lets see an example how the hyperbinary number system works. Lets take the hyperbinary number &quot;1021&quot;, and try and figure out what number it represents. Just as before, each position represents a power of 2, but now you can have 0, 1 or 2 of each of them, so the calculation goes like this: </p>
+
+            <p>1*2<sup>3</sup> + 0*2<sup>2</sup> + 2*2<sup>1</sup> + 1*2<sup>0</sup></p>
+
+            <p>= 8 + 2*2 + 1</p>
+
+            <p>= 8 + 4 + 1</p>
+
+            <p>= 13</p>
+
+            <p>Interestingly, this is not the only way you can represent the number 13 in hyperbinary, you could also write 13 as &quot;221&quot; and &quot;1101&quot;.</p>
+
+            <p>In fact, this is a common issue with this number system: most numbers can be written in multiple ways in hyperbinary. Your challenge today is to find every single hyperbinary representation of a given number. </p>
+        </div>
+        <script src="BinaryHype.js"></script>
+    </body>
+</html>

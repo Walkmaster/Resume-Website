@@ -1,0 +1,373 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 9-Apr-2015, 2:45:07 PM
+    Author     : Walkmaster
+*/
+
+html, body {
+    font-family:"Noto Sans";
+    font-size: 15px;
+    color: white;
+    width: 100%;
+    min-width: 750px;
+    margin: 0px;
+    padding: 0px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background: url("../assets/london-zoom.jpg") no-repeat fixed; // Picture provided by https://www.flickr.com/photos/haljackey as per creative common https://creativecommons.org/licenses/by-sa/2.0/
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-color: white;
+}
+
+canvas { display:block; position: fixed; }
+
+header {
+    position: fixed;
+    width: 100%;
+    min-width: 750px;
+    height: 60px;
+    background: #2c3e50;
+    z-index: 1;
+}
+
+nav ul li a:link
+{
+    color: white;
+    text-decoration: none;
+}
+
+a:link {
+    color: white;
+    border-bottom: 1px dotted
+}
+
+a:visited {
+    color: white;
+    border-bottom: 1px dotted
+}
+
+nav ul li a:visited
+{
+    color: white;
+    text-decoration: none;
+}
+
+nav ul { 
+    float: left;
+    padding-top: 20px;
+    padding-left: 25px;
+    font-size: 15px;
+}
+
+nav ul li { 
+    display: inline;
+    padding: 5px;
+    padding-right: 10px;
+    border-right: 4px solid white;
+    -webkit-transition: color 0.30s ease-in;
+    -moz-transition: color 0.30s ease-in;
+    -o-transition: color 0.30s ease-in;
+    -ms-transition: color 0.30s ease-in;
+    transition: color 0.30s ease-in;
+}
+
+nav ul li:hover {
+    color: #E8C782;
+}
+
+.header-name {
+    display: inline;
+    font-family: Lobster;
+}
+
+.header-item {
+    display: inline;
+    float: right;
+}
+
+.content {
+    padding-top: 75px;
+    padding-bottom: 100px;
+    display: block;
+}
+
+.brad-circle {
+    position: relative;
+    margin: 0 auto;
+    height: 150px;
+    width: 150px;
+    backface-visibility: hidden;
+    -moz-transition: all 0.6s ease-in-out;
+    -ms-transition: all 0.6s ease-in-out;
+    -o-transition: all 0.6s ease-in-out;
+    -webkit-transition: all 0.6s ease-in-out;
+    transition: all 0.6s ease-in-out;
+    transition-delay: 2s;
+    transform-style: preserve-3d;
+}
+
+.brad-circle > div {
+    background-position: center center;
+    backface-visibility: hidden;
+}
+
+.brad-circle img{
+    display: block;
+    left: 0;
+    right: 0;
+    height: 150px;
+    width: 150px;
+}
+
+.brad-circle-handsom-face {
+    position: absolute;
+    -moz-transform: rotate3d(0,1,0,180deg);
+    -ms-transform: rotate3d(0,1,0,180deg);
+    -o-transform: rotate3d(0,1,0,180deg);
+    -webkit-transform: rotate3d(0,1,0,180deg);
+    transform: rotate3d(0,1,0,180deg);
+       
+}
+
+.brad-circle-handsom-face img{
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 50%;
+}
+
+.brad-circle-logo {
+    position: absolute;
+}
+
+.brad-circle-logo img{
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.article {
+    clear: both;
+    margin: 0;
+}
+
+.article-title {
+    width: 600px;
+    right: 0;
+    left: 0;
+    margin-top: 25px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 1px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: #485563;
+}
+
+.article-box {
+    margin: 0;
+    text-align: left;
+    position: relative;
+    padding: 10px;
+    width: 600px;
+    right: 0;
+    left: 0;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #4e5d6c;
+    background-attachment: fixed;
+    margin-bottom: 25px;
+}
+
+.article-box-content{
+    overflow: hidden;
+    word-wrap: normal;
+}
+
+.article-anchor {
+    margin-top: -60px;
+    position: absolute;
+}
+
+.article-box-expand{
+    display: anything;
+}
+
+.article-box-expand a:visited{
+    color: white;
+}
+.article-box-expand a:link{
+    color: white;
+}
+
+.article-box-expand {
+    position: absolute;
+    padding-left: 10px;
+    padding-right: 10px;
+    opacity: 0.5;
+    display: inline;
+    right: 10px;
+    top: -45px;
+    /*background-color: #0C2032;*/
+    cursor: pointer;
+    color: white;
+    border-radius: 10px;
+    -moz-transition: opacity 0.5s;
+    -ms-transition: opacity 0.5s;
+    -o-transition: opacity 0.5s;
+    -webkit-transition: opacity 0.5s;
+    transition: opacity 0.5s;
+}
+
+.article-box-expand:hover {
+    opacity: 1;
+}
+
+.article-box-employment-icon {
+    width: 25px;
+    height: 25px;
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.footer{
+    bottom: -1px;
+    position: fixed;
+    width: 100%;
+    min-width: 750px;
+    height: auto;
+    background-color: #2c3e50;
+}
+
+.footer-item {
+    display: inline-block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    -webkit-transform: translateZ(0px);
+}
+.footer-item:hover, .float:focus, .float:active {
+    -webkit-transform: translateY(-5px);
+}
+.footer a:visited{
+    color: white;
+}
+.footer a:link{
+    color: white;
+}
+.footer-text {
+    padding-bottom: 10px;
+}
+
+.fa {
+    top: 0;
+    left: 0;
+    width:100%;
+}
+
+.fa-toggle-off{
+    opacity: 0.5;
+}
+
+.fa-toggle-on{
+    opacity: 1;
+}
+
+::-webkit-scrollbar {
+    width: 15px;
+}
+::-webkit-scrollbar-thumb {
+    height: 50px;
+    background-color: #2c3e50;
+}
+
+table 
+{ 
+    font-family: Helvetica, Arial, sans-serif;
+    width: 100%; 
+    border-collapse: collapse; 
+    border-spacing: 0;
+    table-layout: fixed;
+}
+
+td, th 
+{ 
+    border: 1px solid transparent; /* No more visible border */
+    width: 50%;
+    padding: 20px;
+}
+
+tr
+{
+    text-align: left;
+}
+
+tr:nth-child(odd) 
+{
+    background: #DFDFDF;  /* Darken header a bit */
+    color: black;
+    font-weight: bold;
+}
+
+tr:nth-child(even) 
+{
+    background: #4e5d6c;  /* Darken header a bit */
+    color: white;
+    font-weight: bold;
+}
+
+tr:nth-child(even) a:link
+{
+    background: #4e5d6c;  /* Darken header a bit */
+    color: white;
+    font-weight: bold;
+    border-bottom: 1px dotted;
+    text-decoration: none;
+}
+
+tr th:first-child
+{
+    width: 25%;
+    left: 0px;
+    border-right: 3px solid #4e5d6c;
+    text-align: center;
+}
+
+tr:nth-child(even) th:first-child
+{
+    border-right: 3px solid white;
+}
+
+tr th:last-child
+{
+    width: 25%;
+    border-left: 3px solid #4e5d6c;
+    text-align: center;
+}
+
+tr:nth-child(even) th:last-child
+{
+    border-left: 3px solid white;
+}
+
+tr th a:link
+{
+    color:inherit;
+    border-bottom: 1px dotted;
+    text-decoration: none;
+}
+
+tr th a:visited
+{
+    color:inherit;
+    border-bottom: 1px dotted;
+    text-decoration: none;
+}
+
