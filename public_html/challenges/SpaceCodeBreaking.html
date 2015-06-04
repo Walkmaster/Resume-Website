@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Lumberjack Pile Problem</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h3>The Challenge: <a href="http://www.reddit.com/r/dailyprogrammer/comments/38fjll/20150603_challenge_217_intermediate_space_code/">Space Code Breaking</a></h3>
+
+        <p>The year 2266 we have encountered alien planets who use very simple encryption to send messages. Lucky for us we intercept all these messages and we can break the code. </p>
+
+        <p>The problem is the collection of messages are all from the same space probe. So we are not sure which message is from what system. </p>
+
+        <p>Our challenge today is to decode the message and have our solutions determine which planet system the message came from.</p>
+
+        <p>Omicron V: will take and invert the 5th bit. ( 0001 0000) That is the bit location in the byte where we invert the bit.</p>
+
+        <p>Hoth: Takes the value of the ASCII character and adds 10 to it.</p>
+
+        <p>Ryza IV: Takes the value of the ASCII character and subtracts 1 to it.</P
+
+        <p>Htrae: reverses the characters.</p>
+
+        <p>It is not enough to just take the message and decode it in all 4 ways and let you decide which one is right or wrong. You need to have your program/solution determine the right decoding. All messages are in english (I know even in the future on alien planets).</p>
+
+        <script src="SpaceCodeBreaking.js"></script>
+    </body>
+</html>
